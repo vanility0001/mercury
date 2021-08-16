@@ -5,7 +5,7 @@ import (
 	"log"
 )
 
-func connectToDb(databaseURL string) *sql.DB {
+func ConnectToDb(databaseURL string) *sql.DB {
 	con, err := sql.Open("postgres", databaseURL)
 	if err != nil {
 		log.Fatalln()
