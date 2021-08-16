@@ -28,10 +28,6 @@ type Account struct {
 	Email string `json:"email"`
 }
 
-func getUserInfo(ctx *fiber.Ctx) error {
-
-}
-
 func main() {
 	app := fiber.New()
 	var nuts string = "/"
