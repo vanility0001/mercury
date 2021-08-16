@@ -5,11 +5,13 @@ import (
 	"log"
 )
 
-func ConnectToDb(databaseURL string) *sql.DB {
+var DB *sql.DB
+
+func ConnectToDb(databaseURL string) {
 	con, err := sql.Open("postgres", databaseURL)
 	if err != nil {
 		log.Fatalln()
 	}
 
-	return con
+	DB = con
 }
